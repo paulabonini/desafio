@@ -1,0 +1,24 @@
+.navBar{
+    position: absolute;
+    margin: 50px 420px;
+    
+}
+
+.navBar a {
+    color: #DE4B4B;
+    letter-spacing: -0.01px;
+    margin: 10px;
+}
+
+.navBar a i {
+    all: none;
+}
+
+.iconTwo {
+    text-align: center;
+    font-weight: bold;
+    width: 22px;
+    height: 22px;
+    border: 2px solid  #DE4B4B;
+    border-radius: 50%;
+}

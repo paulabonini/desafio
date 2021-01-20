@@ -7,7 +7,7 @@ export default props =>
             <input type="text" id="name" name="name" placeholder="Nome (igual ao cartão)" required />
             <div className="teste">
                 <input type="text" id="validade" name="validade" placeholder="Validade" maxLength="5" required />
-                <input type="text" id="code" name="code" placeholder="CVV" maxLength="3" required />
+                <input type="text" id="code" name="code" placeholder="CVV" maxLength="3" required /><i class="fas fa-info-circle"></i>
             </div>
             <select>
                 <option value="none">Número de parcelas</option>
