@@ -8,6 +8,7 @@ export default props =>
         <div className="etapa">
             <a href="#"><i class="fas fa-chevron-left"></i></a>
             <p className="mobile"><strong>Etapa 2</strong> de 3</p>
+            <p className="big">Alterar forma de pagamento</p>
         </div>
         <div className="titulo">
             <img src={simboloCartao}/>

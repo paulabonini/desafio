@@ -1,24 +1,34 @@
 .navBar{
     position: absolute;
-    margin: 50px 420px;
+    margin: 50px 0 50px 400px;
     
 }
 
 .navBar a {
+    text-decoration: none;
     color: #DE4B4B;
+    font-size: 13px;
     letter-spacing: -0.01px;
-    margin: 10px;
+    margin: 8px;
 }
 
-.navBar a i {
-    all: none;
+.navBar a i, .navBar i {
+    color: #DE4B4B;
 }
 
-.iconTwo {
+.icon {
+    display: inline;
     text-align: center;
-    font-weight: bold;
-    width: 22px;
-    height: 22px;
-    border: 2px solid  #DE4B4B;
+    font-weight: 900;
+    padding: 0 5px;
+    margin: 5px;
+    border: 1.8px solid  #DE4B4B;
     border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+    .navBar{
+        display: none;
+    }
+
 }
