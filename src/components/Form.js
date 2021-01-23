@@ -80,23 +80,23 @@ export default class Form extends React.Component{
                     <div className="label-float">
                         <input type="text" name="cardNumber" placeholder=" " value={this.state.cardNumber} onChange={this.handleChange} maxLength="19" required/>
                         <label>Número do cartão</label>
-                        <div>{this.state.cardNumberErr}</div>
+                        <div className="err">{this.state.cardNumberErr}</div>
                     </div>
                     <div className="label-float">
                         <input type="text" name="name" placeholder=" " value={this.state.name} onChange={this.handleChange} required/>
                         <label>Nome (igual ao cartão)</label>
-                        <div>{this.state.nameErr}</div>
+                        <div className="err">{this.state.nameErr}</div>
                     </div>
-                    <div className="flex"> 
+                    <div  className="flex"> 
                         <div className="label-float">
                             <input type="text" name="date" placeholder=" " maxLength="5" value={this.state.date} onChange={this.handleChange} required/>
                             <label>Validade</label>
-                            <div>{this.state.dateErr}</div>
+                            <div className="err">{this.state.dateErr}</div>
                         </div>
                         <div className="label-float">
                             <input type="text" name="code" placeholder=" " maxLength="3" value={this.state.code} onChange={this.handleChange} required/>
                             <label>CVV <i class="fas fa-info-circle"></i></label>
-                            <div>{this.state.codeErr}</div>
+                            <div className="err">{this.state.codeErr}</div>
                         </div>    
                     </div>
                     <div>
@@ -107,7 +107,7 @@ export default class Form extends React.Component{
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
-                    <div>{this.state.quantityErr}</div>
+                    <div className="err select">{this.state.quantityErr}</div>
                     </div>
                     
                     <button name="button" type="submit" >CONTINUE</button>

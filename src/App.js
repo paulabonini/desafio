@@ -1,18 +1,19 @@
-import Mobile from './components/Mobile';
-import './components/Mobile.css';
-import Form from './components/Form';
-import './components/Form.css';
+import Header from './components/Header';
+import './components/Header.css';
 import './App.css';
 import Nav from './components/Nav';
 import './components/Nav.css'
-
+import FormValidator from './components/FormValidator';
+import './components/FormValidator.css';
 
 function App() {
   return (
-    <div>
-      <Nav></Nav>
-      <Mobile></Mobile>
-      <Form></Form>     
+    <div className="container">
+      <div className="wrapper">
+        <Nav></Nav>
+        <Header></Header>
+        <FormValidator></FormValidator>
+      </div>  
     </div>
   );
 }

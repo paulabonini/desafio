@@ -1,11 +1,9 @@
-.main{
-  width: 100%;
-  margin-top: 110px;
+#PaymentForm {
+  margin: 0 auto;
+  margin-top: -80px;
+  width: 80%;
 }
 
-form {
-  margin: 60px 50px 0;
-}
 
 .label-float{
   position: relative;
@@ -13,7 +11,7 @@ form {
   margin-top: 20px;
   color: #C9C9C9;
 }
-
+  
 .label-float input{
   width: 100%;
   border: 0;
@@ -72,6 +70,14 @@ form select {
   color: #C9C9C9;
 }
 
+form select option{
+  color: black;
+}
+
+select .optionDefault {
+  color: #C9C9C9;
+}
+
 button {
   background: #DE4B4B 0% 0% no-repeat;
   border-radius: 8px;
@@ -92,30 +98,9 @@ button {
   margin-top: -40px;
 }
 
-  /* medias */
-
-  @media (min-width: 768px) {
-    .main {
-      width: 45%;
-      float: right;
-      margin-top: -30rem;
-    }
-  
-    .label-float{
-      margin-top: 40px;
-    }
-    
-    form select {
-      margin: 50px 0;
-    }
-    
-    button {
-      width: 60%;
-      float: right;
-    }
-
-    .select {
-      margin-top: -50px;
-    }
-
-  }
+@media (min-width: 826px) {
+  #PaymentForm {
+    display: flex;
+    background: none;
+  }  
+}

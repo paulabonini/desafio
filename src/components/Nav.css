@@ -2,13 +2,12 @@
     float: right;
     margin-top: 50px;
     margin-right: 1.5rem;
-    margin-left: 20rem;
 }
 
 .navBar a {
     text-decoration: none;
     color: #DE4B4B;
-    font-size: 1rem;
+    font-size: 80%;
     letter-spacing: -0.01px;
     margin: .25rem;
 }
