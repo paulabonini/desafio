@@ -60,6 +60,15 @@
   width: 100%;
 }
 
+.flex .label-float {
+  width: 100%;
+}
+
+.test {
+  margin-left: 30px;
+  margin-right: 0;
+}
+
 form select {
   width: 100%;
   margin: 40px 0;
@@ -90,8 +99,12 @@ button {
 }
 
 .err{
+  margin-top: -2px;
   font-size: 13px;
   color: #DE4B4B;
+  /* border-top: 2px solid  #DE4B4B;
+  position: absolute;
+  width: 100%; */
 }
 
 .select {
@@ -101,6 +114,33 @@ button {
 @media (min-width: 826px) {
   #PaymentForm {
     display: flex;
-    background: none;
+    margin: 0 0;
+    width: 90%;
   }  
+
+  form{
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+
+  form input {
+    margin: 5px;
+  }
+
+  .rccs__card--unknown, .rccs__card--unionpay, .rccs__card--visa, .rccs__card--mastercard, .rccs__card--hipercard, .rccs__card--discover, .rccs__card--elo, .rccs__card--jcb, .rccs__card--laser, .rccs__card--maestro, .rccs__card--dinersclub, .rccs__card--dankort, .rccs__card--amex, .rccs__card--visaelectron {
+    height: 200px;
+    width: 320px;
+    margin-left: 20%;
+  }
+  
+  .rccs__card--front, .rccs__card--flipped {
+    margin-top: 100px;
+  }
+
+  button {
+    width: 60%;
+    float: right;
+  }
+
 }

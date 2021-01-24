@@ -6,6 +6,7 @@ import './components/Nav.css'
 import FormValidator from './components/FormValidator';
 import './components/FormValidator.css';
 
+
 function App() {
   return (
     <div className="container">

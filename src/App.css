@@ -1,11 +1,13 @@
 @media (min-width: 826px) {
   .container {
     background-color: #F7F7F7 ;
-    padding: 60px 70px 600px 70px;
+    padding: 60px 70px 400px 70px;
   }
   
   .wrapper {
-    background: #ffffff
-    ;
+    height: 75vh;
+    position: relative;
+    background: #ffffff;
+    /* padding: 50px 25px; */
   }
 }

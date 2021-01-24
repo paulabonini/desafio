@@ -54,12 +54,13 @@
 
 @media (min-width: 826px) {
   .header {
+    position: absolute;
     width: 45%;
     height: 100%;
-    margin: 0;
+    padding: 0;
   }
 
-  .etapa .mobile {
+  .etapa .mobile, .etapa a {
     visibility: hidden;
   }
 
@@ -70,7 +71,8 @@
     position: absolute;
     margin: auto;
     width: 100%;
-    margin-top: -50px;
+    margin-top: 10px;
+    margin-left: 15%;
     font-size: 13px;
   }
 
@@ -82,11 +84,12 @@
   
   .titulo {
     padding: 8px;
-    margin-top: 30px;
+    margin-top: 90px;
+    margin-left: 15%;
   }
 
   .titulo p {
-    font-size: 20px;
+    font-size: 18px;
     width: auto;
   }
 

@@ -1,7 +1,9 @@
 .navBar{
     float: right;
     margin-top: 50px;
-    margin-right: 1.5rem;
+    margin-bottom: 20px;
+    margin-right: 8%;
+    padding: 10px;
 }
 
 .navBar a {
