@@ -40,6 +40,8 @@ export default class PaymentForm extends React.Component {
     this.setState({ [name]: value });
   }
 
+  
+
   validate = () => {
     let numberErr = "";
     let nameErr = "";
@@ -47,7 +49,11 @@ export default class PaymentForm extends React.Component {
     let cvcErr = "";
     let quantityErr = "";
 
-    if (!this.state.number.includes(" ")) {
+    let numberPattern="[\d| ]{16,22}";
+    let expiryPattern="\d\d/\d\d";
+    let cvcPattern="\d{3,4}";
+
+    if (!this.state.number.match(numberPattern)) {
         numberErr = "Número de cartão inválido";
     }
 
@@ -55,15 +61,15 @@ export default class PaymentForm extends React.Component {
         nameErr = "Insira seu nome completo";
     }
 
-    if (!this.state.expiry.includes("/")) {
+    if (!this.state.expiry.match(expiryPattern)) {
         expiryErr = "Data inválida";
     }
 
-    if (this.state.cvc.length < 3) {
+    if (!this.state.cvc.match(cvcPattern)) {
         cvcErr = "Código inválido";
     }
 
-    if (!this.state.quantity) {
+    if (document.getElementById("select").value == "" ) {
         quantityErr = "Insira o número de parcelas";
     }
 
@@ -87,6 +93,14 @@ handleSubmit = event => {
 };
 
   render() {
+    let inputStyle= {
+      borderBottom: "2px solid #C9C9C9"
+    };
+
+    let errStyle = {
+      borderBottom: "2px solid #DE4B4B"
+    };
+
     return (
       <div id="PaymentForm">
         <Cards
@@ -103,6 +117,10 @@ handleSubmit = event => {
               type="text"
               name="number"
               placeholder=" "
+              maxLength="19"
+              style={
+                !this.state.numberErr ? inputStyle : errStyle
+              }
               onChange={this.handleInputChange}
               onFocus={this.handleInputFocus}
               required
@@ -115,6 +133,9 @@ handleSubmit = event => {
                 type="text"
                 name="name"
                 placeholder=" "
+                style={
+                  !this.state.nameErr ? inputStyle : errStyle
+                }
                 onChange={this.handleInputChange}
                 onFocus={this.handleInputFocus}
                 required
@@ -128,6 +149,9 @@ handleSubmit = event => {
                 type="text"
                 name="expiry"
                 placeholder=" "
+                style={
+                  !this.state.expiryErr ? inputStyle : errStyle
+                }
                 onChange={this.handleInputChange}
                 onFocus={this.handleInputFocus}
                 required
@@ -141,6 +165,9 @@ handleSubmit = event => {
                 name="cvc"
                 placeholder=" "
                 maxLength="3"
+                style={
+                  !this.state.cvcErr ? inputStyle : errStyle
+                }
                 onChange={this.handleInputChange}
                 onFocus={this.handleInputFocus}
                 required
@@ -149,15 +176,17 @@ handleSubmit = event => {
               <div className="err">{this.state.cvcErr}</div>
             </div>
           </div>
-          <div>
-            <select value={this.state.quantity} onChange={this.handleChange}>
-              <option className="optionDefault" value="none">Número de parcelas</option>
-              <option value="1">6x R$500,00 sem juros</option>
+          <div className="arrow">
+            <select id="select" name="quantity" onChange={this.handleChange} onFocus={this.handleInputFocus} style={
+                !this.state.quantityErr ? inputStyle : errStyle
+              }>
+              <option className="optionDefault" value="">Número de parcelas</option>
+              <option value="1">6x R$500,00 sem juros </option>
               <option value="2">12x R$1.000,00 sem juros</option>
             </select>
             <div className="err select">{this.state.quantityErr}</div>
           </div>
-              
+
           <button name="button" type="submit" >CONTINUE</button>
               
 			  </form>

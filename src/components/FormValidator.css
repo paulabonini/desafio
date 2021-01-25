@@ -45,10 +45,6 @@
   -moz-transition: all .3s ease-out;
 }
 
-.label-float input:focus:required:invalid{
-  border-bottom: 2px solid red;
-}
-
 .label-float input:focus + label,
 .label-float input:not(:placeholder-shown) + label{
   font-size: 13px;
@@ -76,16 +72,28 @@ form select {
   border-bottom: 1px solid #C9C9C9;
   font-size: 17px;
   opacity: 1;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance: none;
+  /* color: #C9C9C9; */
+}
+
+form select .optionDefault {
   color: #C9C9C9;
 }
 
-form select option{
-  color: black;
+.arrow {    
+  overflow:hidden; 
+} 
+
+.arrow select {     
+ background: url('../assets/arrow.png') no-repeat;    
+ background-position: 100% center;            
+ text-indent: 0.01px; /* Remove seta padrão do FireFox */      
+ text-overflow: "";  /* Remove seta padrão do FireFox */            
 }
 
-select .optionDefault {
-  color: #C9C9C9;
-}
+select::-ms-expand {display: none;} /* Remove seta padrão do IE*/
 
 button {
   background: #DE4B4B 0% 0% no-repeat;
@@ -102,9 +110,6 @@ button {
   margin-top: -2px;
   font-size: 13px;
   color: #DE4B4B;
-  /* border-top: 2px solid  #DE4B4B;
-  position: absolute;
-  width: 100%; */
 }
 
 .select {
@@ -143,4 +148,10 @@ button {
     float: right;
   }
 
+}
+
+@media (min-width: 1101px) {
+  .rccs__card--front, .rccs__card--flipped {
+    margin-left: 10%;
+  }
 }

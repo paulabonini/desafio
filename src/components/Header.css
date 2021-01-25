@@ -99,3 +99,13 @@
     margin-right: 0;
   }
 }
+
+@media (min-width: 1101px) {
+  .header{
+    width: 42%;
+  }
+
+  .titulo, .big{
+    margin-left: 25%;
+  }
+}
