@@ -159,7 +159,7 @@ handleSubmit = event => {
               <label>Validade</label>
               <div className="err">{this.state.expiryErr}</div>
             </div>
-            <div className="label-float test">
+            <div className="label-float cvc-margin">
               <input
                 type="text"
                 name="cvc"
@@ -177,13 +177,14 @@ handleSubmit = event => {
             </div>
           </div>
           <div className="arrow">
-            <select id="select" name="quantity" onChange={this.handleChange} onFocus={this.handleInputFocus} style={
+            <select id="select" placehold="" name="quantity" value={this.state.value} onChange={this.handleChange} onFocus={this.handleInputFocus} style={
                 !this.state.quantityErr ? inputStyle : errStyle
               }>
-              <option className="optionDefault" value="">Número de parcelas</option>
+              <option value="">Número de parcelas</option>
               <option value="1">6x R$500,00 sem juros </option>
               <option value="2">12x R$1.000,00 sem juros</option>
             </select>
+            
             <div className="err select">{this.state.quantityErr}</div>
           </div>
 

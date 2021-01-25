@@ -1,10 +1,10 @@
-# Checkout - Desafio Front-End
+# Checkout - Front-End Challenge
 
-## Layout para formulário de checkout com validação. :credit_card:
+## Layout for checkout form with validation. :credit_card:
 
 ### Getting Started 🚀
 
-These instructions will get you a copy of the full project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the full project up and running on your local machine for development purposes.
 
 The project can be built with npm or yarn, so choose one of the approach bellow in case you don't have any installed on your system.
 

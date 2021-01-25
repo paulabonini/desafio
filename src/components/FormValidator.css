@@ -4,7 +4,6 @@
   width: 80%;
 }
 
-
 .label-float{
   position: relative;
   padding-top: 13px;
@@ -24,14 +23,6 @@
   -moz-transition: all .3s ease-out;
   -webkit-appearance:none;
   border-radius: 0;
-}
-
-.label-float input:focus{
-  border-bottom: 2px solid  #C9C9C9;
-}
-
-.label-float input::placeholder{
-  color:transparent;
 }
 
 .label-float label{
@@ -56,11 +47,7 @@
   width: 100%;
 }
 
-.flex .label-float {
-  width: 100%;
-}
-
-.test {
+.cvc-margin {
   margin-left: 30px;
   margin-right: 0;
 }
@@ -75,11 +62,12 @@ form select {
   -webkit-appearance: none;
   -moz-appearance:    none;
   appearance: none;
-  /* color: #C9C9C9; */
+  outline: none;
+  color: #C9C9C9;
 }
 
-form select .optionDefault {
-  color: #C9C9C9;
+option{
+  color: black;
 }
 
 .arrow {    
@@ -104,6 +92,7 @@ button {
   width: 100%;
   height: 40px;
   color: #FFFFFF;
+  outline: none;
 }
 
 .err{
